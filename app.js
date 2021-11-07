@@ -47,7 +47,7 @@ app.use(
 );
 app.use(
   session({
-    secret: "foo",
+    secret,
     resave: false,
     saveUninitialized: true,
     store: MongoDBStore.create({
