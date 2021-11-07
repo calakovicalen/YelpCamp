@@ -45,6 +45,7 @@ app.use(
     replaceWith: "_",
   })
 );
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
 app.use(
   session({
     secret,
@@ -55,7 +56,6 @@ app.use(
     }),
   })
 );
-const secret = process.env.SECRET || "thisshouldbeabettersecret!";
 
 /* store.on("error", function (e) {
   console.log("SESSION STORE ERROR", e);
